@@ -48,7 +48,7 @@ public class PersonServiceTest {
     private Object[][] testCreate_positiveValues() throws IOException, URISyntaxException {
 
       Address givenAddress = new Address("Peelamedu", "Coimbatore", 641004);
-      Person givenPerson = new Person("Ranjith", "R", "ranjithraj@gmail.com", "04-04-1996", Timestamp.from(Instant.now()), givenAddress);
+      Person givenPerson = new Person("Naveen", "S", "naveens@gmail.com", "04-04-1996", Timestamp.from(Instant.now()), givenAddress);
       Person expectedPerson = givenPerson;
       return new Object[][] {
                               { givenPerson, expectedPerson }
