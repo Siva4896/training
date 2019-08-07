@@ -95,14 +95,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-servlet -->
-        <dependency>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server -->
-        <dependency>
-        </dependency>
-
     </dependencies>
 
     <build>
