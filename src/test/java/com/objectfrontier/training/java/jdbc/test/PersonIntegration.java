@@ -26,7 +26,7 @@ public class PersonIntegration {
     public void setup() throws Exception {
 
         String filePath = "D:/tools/jetty-distribution-9.3.6.v20151106/start.jar"; //where your jar is located.
-        Runtime.getRuntime().exec("java -jar" + filePath);
+        Runtime.getRuntime().exec(" java -jar " + filePath);
     }
 
     /* Before Test */
