@@ -1,4 +1,4 @@
-package com.objectfrontier.training.java.jdbc;
+package com.objectfrontier.training.java.jdbc.service;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

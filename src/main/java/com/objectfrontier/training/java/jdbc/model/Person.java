@@ -12,6 +12,8 @@ public class Person {
     private Timestamp createdDate;
     private Address address;
 
+    private String[] initials;
+
     public Person() {}
 
     public Person(long id) {

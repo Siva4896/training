@@ -9,6 +9,10 @@ public class Address {
 
     public Address() {}
 
+    public Address(long id) {
+        this.id = id;
+    }
+
     public Address(String street, String city, long postalCode) {
 
         this.street = street;
