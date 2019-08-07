@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -21,7 +22,7 @@ public class PersonIntegration {
 
     /* Before Class */
 
-    @Before
+    @BeforeClass
     public void setup() throws Exception {
 
         String filePath = "D:/tools/jetty-distribution-9.3.6.v20151106/start.jar"; //where your jar is located.
