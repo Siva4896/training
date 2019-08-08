@@ -95,6 +95,20 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server -->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>9.3.6.v20151106</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-servlet -->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>9.3.6.v20151106</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -107,18 +121,6 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
-            </plugin>
-            
-            <plugin>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-server</artifactId>
-                <version>9.3.6.v20151106</version>
-            </plugin>
-
-            <plugin>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-servlet</artifactId>
-                <version>9.3.6.v20151106</version>
             </plugin>
 
             <!-- Following plugin executes the testng tests -->
@@ -133,7 +135,7 @@
                 </configuration>
             </plugin>
 
-            <!-- <plugin>
+            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>3.0.4</version>
@@ -151,7 +153,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin> -->
+            </plugin>
 
             <!-- <plugin>
               <groupId>org.eclipse.jetty</groupId>
