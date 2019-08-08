@@ -19,16 +19,6 @@ import com.objectfrontier.training.java.jdbc.servlet.RequestHelper;
 public class PersonIntegration {
 
     String baseUrl = "http://localhost:8080/webservices.1.0.1/person";
-
-    /* Before Class */
-
-    @BeforeClass
-    public void setup() throws Exception {
-
-        String filePath = "D:/tools/jetty-distribution-9.3.6.v20151106/start.jar"; //where your jar is located.
-        Runtime.getRuntime().exec(" java -jar " + filePath);
-    }
-
     /* Before Test */
 
     @BeforeTest
