@@ -1,11 +1,13 @@
 package com.objectfrontier.training.java.jdbc.test;
 
+import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -13,16 +15,33 @@ import org.testng.annotations.Test;
 
 import com.objectfrontier.training.java.jdbc.exception.AppException;
 import com.objectfrontier.training.java.jdbc.exception.ExceptionCode;
+import com.objectfrontier.training.java.jdbc.service.JettyWebAppRunner;
 import com.objectfrontier.training.java.jdbc.servlet.HttpMethod;
 import com.objectfrontier.training.java.jdbc.servlet.RequestHelper;
 
 public class PersonIntegration {
 
     String baseUrl = "http://localhost:8080/webservices.1.0.1/person";
+    private JettyWebAppRunner runner;
+
+    @BeforeClass
+    public void init() throws Exception {
+        runner = new JettyWebAppRunner(8080,
+                new File("src/main/webapp/WEB-INF/web.xml"),
+                new File("src/main/webapp"),
+                "/");
+        runner.start();
+    }
+
+    @AfterClass
+    public void tearDown() throws Exception {
+        runner.stop();
+    }
+
     /* Before Test */
 
     @BeforeTest
-    private void init() throws IOException {
+    private void initTest() throws IOException {
 
         try {
             RequestHelper.setBaseUrl(baseUrl);
