@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.objectfrontier</groupId>
-    <artifactId>maven-service</artifactId>
+    <artifactId>maven-web-service</artifactId>
     <version>1.0.0</version>
 
     <dependencies>
@@ -140,7 +140,15 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>3.0.4</version>
-                <executions>
+                <reportSets>
+                  <reportSet>
+                    <reports>
+                      <!-- select non-aggregate reports -->
+                      <report>report</report>
+                    </reports>
+                  </reportSet>
+                </reportSets>
+                <!-- <executions>
                     <execution>
                         <goals>
                             <goal>prepare-agent</goal>
@@ -153,7 +161,7 @@
                             <goal>report</goal>
                         </goals>
                     </execution>
-                </executions>
+                </executions> -->
             </plugin>
 
             <!-- <plugin>
