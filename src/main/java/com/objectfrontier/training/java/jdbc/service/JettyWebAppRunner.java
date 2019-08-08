@@ -1,6 +1,8 @@
 package com.objectfrontier.training.java.jdbc.service;
 
 import java.io.File;
+import org.eclipse.jetty.Server;
+import org.eclipse.jetty.WebAppContext;
 
 public class JettyWebAppRunner {
     private final Server server;
