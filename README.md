@@ -1,3 +1,3 @@
 # training
 
-Jenkins demo project changing readme file
+Jenkins demo project changing settings.xml file
