@@ -26,9 +26,12 @@ public class PersonIntegration {
     @BeforeClass
     public void startJetty() throws Exception {
 
-        System.out.println(this.getClass().getClassLoader().getResource("./WEB-INF/web.xml"));
-        String webConfig = this.getClass().getClassLoader().getResource("./WEB-INF/web.xml").getFile();
-        String webDirLocation = this.getClass().getClassLoader().getResource("").getFile();
+        System.out.println(this.getClass().getClassLoader().getResource("WEB-INF/web.xml"));
+        System.out.println(this.getClass().getClassLoader().getResource(""));
+//        String webConfig = this.getClass().getClassLoader().getResource("WEB-INF/web.xml").getFile();
+//        String webDirLocation = this.getClass().getClassLoader().getResource("").getFile();
+        String webConfig = "file:/D:/temp/jenkins-demo/src/main/webapp/WEB-INF/web.xml";
+        String webDirLocation = "file:/D:/temp/jenkins-demo/target/test-classes/";
         jettyServerHelper = new JettyServerHelper(8081, webConfig, webDirLocation, "/");
         RequestHelper.setBaseUrl(baseUrl);
         requestHelper = RequestHelper.create();
