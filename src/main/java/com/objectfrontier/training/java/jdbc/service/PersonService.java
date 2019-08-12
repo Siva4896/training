@@ -125,7 +125,7 @@ public class PersonService {
 
     public String getInitial(Person person) {
 
-        String url = "http://127.0.0.1:8080/sec.web.service/initial?firstName=" + person.getFirstName() + "&lastName=" + person.getLastName();
+        String url = "http://127.0.0.1:8082/sec.web.service/initial?firstName=" + person.getFirstName() + "&lastName=" + person.getLastName();
         StringBuffer response = new StringBuffer();
 
         try {

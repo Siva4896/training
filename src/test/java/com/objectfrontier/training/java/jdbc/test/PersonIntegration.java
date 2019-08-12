@@ -1,6 +1,5 @@
 package com.objectfrontier.training.java.jdbc.test;
 
-import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -9,45 +8,37 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.objectfrontier.training.java.jdbc.exception.AppException;
 import com.objectfrontier.training.java.jdbc.exception.ExceptionCode;
-import com.objectfrontier.training.java.jdbc.service.JettyWebAppRunner;
+import com.objectfrontier.training.java.jdbc.service.JettyServerHelper;
 import com.objectfrontier.training.java.jdbc.servlet.HttpMethod;
 import com.objectfrontier.training.java.jdbc.servlet.RequestHelper;
 
 public class PersonIntegration {
 
-    String baseUrl = "http://localhost:8080/webservices.1.0.1/person";
-    private JettyWebAppRunner runner;
+    String baseUrl = "http://localhost:8081/person/";
+    private static JettyServerHelper jettyServerHelper;
+    private RequestHelper requestHelper;
 
     @BeforeClass
-    public void init() throws Exception {
-        runner = new JettyWebAppRunner(8080,
-                new File("src/main/webapp/WEB-INF/web.xml"),
-                new File("src/main/webapp"),
-                "/");
-        runner.start();
+    public void startJetty() throws Exception {
+
+        System.out.println(this.getClass());
+        System.out.println(this.getClass().getClassLoader().getResource(""));
+        String webConfig = this.getClass().getClassLoader().getResource("WEB-INF/web.xml").getFile();
+        String webDirLocation = this.getClass().getClassLoader().getResource("").getFile();
+        jettyServerHelper = new JettyServerHelper(8081, webConfig, webDirLocation, "/");
+        RequestHelper.setBaseUrl(baseUrl);
+        requestHelper = RequestHelper.create();
+        jettyServerHelper.start();
     }
 
     @AfterClass
     public void tearDown() throws Exception {
-        runner.stop();
-    }
-
-    /* Before Test */
-
-    @BeforeTest
-    private void initTest() throws IOException {
-
-        try {
-            RequestHelper.setBaseUrl(baseUrl);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        jettyServerHelper.stop();
     }
 
     /* Positive testcase for getInitial of Person */
@@ -56,7 +47,7 @@ public class PersonIntegration {
     private void testRead_positive(long personId, String expectedInitial) {
 
         try {
-            String retrivedInitial = new RequestHelper().setMethod(HttpMethod.GET)
+            String retrivedInitial = requestHelper.setMethod(HttpMethod.GET)
                                                        .setSecured(false)
                                                        .requestString("/initial?id=" + personId);
             Assert.assertEquals(retrivedInitial, expectedInitial, "Success!");
@@ -83,7 +74,7 @@ public class PersonIntegration {
     private void testRead_negative(long personId, List<ExceptionCode> expectedError) throws SQLException, IOException {
 
         try {
-            String retrivedPerson = new RequestHelper().setMethod(HttpMethod.GET)
+            String retrivedPerson = requestHelper.setMethod(HttpMethod.GET)
                                                        .setSecured(false)
                                                        .requestString("/initial?id=" + personId);
             Assert.fail(String.format("Person read failed!"));

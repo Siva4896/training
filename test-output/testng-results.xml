@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2020" started-at="2019-08-12T09:53:18Z" finished-at="2019-08-12T09:53:20Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2020" started-at="2019-08-12T09:53:18Z" finished-at="2019-08-12T09:53:20Z">
+      <class name="com.objectfrontier.training.java.jdbc.test.PersonIntegration">
+        <test-method status="PASS" signature="startJetty()[pri:0, instance:com.objectfrontier.training.java.jdbc.test.PersonIntegration@cb5822]" name="startJetty" is-config="true" duration-ms="474" started-at="2019-08-12T09:53:18Z" finished-at="2019-08-12T09:53:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startJetty -->
+        <test-method status="PASS" signature="testRead_negative(long, java.util.List)[pri:0, instance:com.objectfrontier.training.java.jdbc.test.PersonIntegration@cb5822]" name="testRead_negative" duration-ms="1146" started-at="2019-08-12T09:53:18Z" data-provider="testGetInitialNegative" finished-at="2019-08-12T09:53:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[33]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[ID_NOT_FOUND]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRead_negative -->
+        <test-method status="PASS" signature="testRead_positive(long, java.lang.String)[pri:0, instance:com.objectfrontier.training.java.jdbc.test.PersonIntegration@cb5822]" name="testRead_positive" duration-ms="334" started-at="2019-08-12T09:53:20Z" data-provider="testGetInitialPositive" finished-at="2019-08-12T09:53:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BM]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRead_positive -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.objectfrontier.training.java.jdbc.test.PersonIntegration@cb5822]" name="tearDown" is-config="true" duration-ms="15" started-at="2019-08-12T09:53:20Z" finished-at="2019-08-12T09:53:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.objectfrontier.training.java.jdbc.test.PersonIntegration -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
