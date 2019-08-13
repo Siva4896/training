@@ -169,6 +169,20 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.5-SNAPSHOT</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                        <!-- select non-aggregate reports -->
+                        <report>report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+
+            <!-- <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.2</version>
                 <executions>
                     <execution>
@@ -184,7 +198,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
 
              <!-- <plugin>
 		        <artifactId>maven-war-plugin</artifactId>
