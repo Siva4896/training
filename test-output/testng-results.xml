@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1934" started-at="2019-08-12T13:01:14Z" finished-at="2019-08-12T13:01:16Z">
+  <suite name="Default suite" duration-ms="1979" started-at="2019-08-13T06:22:33Z" finished-at="2019-08-13T06:22:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1934" started-at="2019-08-12T13:01:14Z" finished-at="2019-08-12T13:01:16Z">
+    <test name="Default test" duration-ms="1979" started-at="2019-08-13T06:22:33Z" finished-at="2019-08-13T06:22:35Z">
       <class name="com.objectfrontier.training.java.jdbc.test.PersonIntegration">
-        <test-method status="PASS" signature="startJetty()[pri:0, instance:com.objectfrontier.training.java.jdbc.test.PersonIntegration@cb5822]" name="startJetty" is-config="true" duration-ms="456" started-at="2019-08-12T13:01:14Z" finished-at="2019-08-12T13:01:15Z">
+        <test-method status="PASS" signature="startJetty()[pri:0, instance:com.objectfrontier.training.java.jdbc.test.PersonIntegration@cb5822]" name="startJetty" is-config="true" duration-ms="482" started-at="2019-08-13T06:22:33Z" finished-at="2019-08-13T06:22:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startJetty -->
-        <test-method status="PASS" signature="testRead_negative(long, java.util.List)[pri:0, instance:com.objectfrontier.training.java.jdbc.test.PersonIntegration@cb5822]" name="testRead_negative" duration-ms="1149" started-at="2019-08-12T13:01:15Z" data-provider="testGetInitialNegative" finished-at="2019-08-12T13:01:16Z">
+        <test-method status="PASS" signature="testRead_negative(long, java.util.List)[pri:0, instance:com.objectfrontier.training.java.jdbc.test.PersonIntegration@cb5822]" name="testRead_negative" duration-ms="1086" started-at="2019-08-13T06:22:34Z" data-provider="testGetInitialNegative" finished-at="2019-08-13T06:22:35Z">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRead_negative -->
-        <test-method status="PASS" signature="testRead_positive(long, java.lang.String)[pri:0, instance:com.objectfrontier.training.java.jdbc.test.PersonIntegration@cb5822]" name="testRead_positive" duration-ms="284" started-at="2019-08-12T13:01:16Z" data-provider="testGetInitialPositive" finished-at="2019-08-12T13:01:16Z">
+        <test-method status="PASS" signature="testRead_positive(long, java.lang.String)[pri:0, instance:com.objectfrontier.training.java.jdbc.test.PersonIntegration@cb5822]" name="testRead_positive" duration-ms="373" started-at="2019-08-13T06:22:35Z" data-provider="testGetInitialPositive" finished-at="2019-08-13T06:22:35Z">
           <params>
             <param index="0">
               <value>
@@ -43,7 +43,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRead_positive -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.objectfrontier.training.java.jdbc.test.PersonIntegration@cb5822]" name="tearDown" is-config="true" duration-ms="13" started-at="2019-08-12T13:01:16Z" finished-at="2019-08-12T13:01:16Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.objectfrontier.training.java.jdbc.test.PersonIntegration@cb5822]" name="tearDown" is-config="true" duration-ms="13" started-at="2019-08-13T06:22:35Z" finished-at="2019-08-13T06:22:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
