@@ -137,7 +137,7 @@
                 <version>2.14.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <argLine>-javaagent:/src/test/resources/org.jacoco.agent-0.8.4.jar=destfile=target/jacoco.exec</argLine>
+                        <argLine>-javaagent:/src/test/resources/org.jacoco.agent-0.8.4.jar=includes=target/classes/*</argLine>
                         <suiteXmlFile>testng.integration.test.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
