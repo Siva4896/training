@@ -205,10 +205,10 @@
 		        </configuration>
             </plugin> -->
 
-<plugin>
+<!-- <plugin>
 <groupId>org.jacoco</groupId>
 <artifactId>jacoco-maven-plugin</artifactId>
-<version>0.8.5-SNAPSHOT</version>
+<version>0.8.2</version>
 <executions>
 <execution>
 <id>default-prepare-agent</id>
@@ -255,7 +255,7 @@
 </configuration>
 </execution>
 </executions>
-</plugin>
+</plugin> -->
 
 <plugin>
 <groupId>org.apache.maven.plugins</groupId>
