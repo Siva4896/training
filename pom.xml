@@ -114,8 +114,6 @@
 		<resources>
 			<resource>
 				<directory>src/main/webapp</directory>
-			</resource>
-			<resource>
 				<includes>
 					<include>**/*.xml</include>
 				</includes>
